@@ -1,7 +1,7 @@
 from django.db import models
 import uuid 
 # Create your models here.
-class Base(models.models):
+class Base(models.Model):
     id = models.UUIDField( 
          primary_key = True, 
          default = uuid.uuid4, 

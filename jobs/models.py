@@ -5,9 +5,10 @@ from base.enum import  Level
 class Jobs(Base):
     name = models.CharField(max_length=128, null=False)
     expired_time = models.DateTimeField(null= False)
-    salary = models.DecimalField(max_digits=3, null=False)
-    description = models.CharField(max_lenght = 2000)
+    salary = models.DecimalField(max_digits=3, decimal_places=1, null=False)
+    description = models.CharField(max_length = 2000)
     level= models.CharField(
+        max_length = 2,
         choices=Level.choices,
         null=False
     )

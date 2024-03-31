@@ -8,11 +8,11 @@ class Company(Base):
     
     age = models.IntegerField(null=False,)
     email = models.EmailField(max_length=254,null=False,)
-    address = models.OneToOneField(Address, null=False, blank=False,
-                                           on_delete=models.CASCADE, related_name='address')
+    company_address = models.OneToOneField(Address, null=False, blank=False,
+                                           on_delete=models.CASCADE, related_name='company_address')
     
 
-    personal_introduction = models.CharField(max_lenght = 2000)
+    personal_introduction = models.CharField(max_length = 2000)
     major = models.ManyToManyField(Major)
 
 
